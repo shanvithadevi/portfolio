@@ -255,8 +255,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (mobileMenuBtn)       mobileMenuBtn.addEventListener('click', openMobileDrawer);
-  if (closeMobileMenuBtn)  closeMobileMenuBtn.addEventListener('click', closeMobileDrawer);
-  if (mobileDrawerOverlay) mobileDrawerOverlay.addEventListener('click', closeMobileDrawer);
+  if (closeMobileMenuBtn)  closeMobileMenuBtn.addEventListener('click', () => {alert("X button clicked");closeMobileDrawer();});
+  if (mobileDrawerOverlay) mobileDrawerOverlay.addEventListener('click', () => {alert("Overlay clicked");closeMobileDrawer();});
 
   // ============================================================
   // 6. CONTACT FORM
