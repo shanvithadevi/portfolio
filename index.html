@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogi Shanvitha Devi | Portfolio</title>
+  <meta name="description" content="Professional portfolio of Jogi Shanvitha Devi - B.Tech Student, Front-End Developer, and Problem Solver. Explore projects, technical skills, and educational timeline.">
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen h-screen flex flex-col overflow-hidden transition-colors duration-500">
+
+  <!-- Dynamic Glowing Background Orbs -->
+  <div class="absolute-bg-orbs">
+    <div class="orb orb-top bg-glow-orange dark:bg-glow-blue"></div>
+    <div class="orb orb-bottom bg-glow-orange dark:bg-glow-blue"></div>
+  </div>
+
+  <!-- Header Section -->
+  <header class="header-nav">
+    <div class="header-logo-container">
+      <div class="logo-box bg-gradient-orange dark:bg-gradient-blue shadow-orange dark:shadow-blue">
+        JD
+      </div>
+      <div>
+        <h1 class="logo-title text-slate-900 dark:text-white">Jogi Shanvitha Devi</h1>
+        <p class="logo-subtitle text-slate-500 dark:text-slate-400">Front-End Developer &amp; Programmer</p>
+      </div>
+    </div>
+
+    <!-- Desktop Navigation Links -->
+    <nav class="desktop-nav">
+      <button class="nav-link" data-target="home">Home</button>
+      <button class="nav-link" data-target="about">About</button>
+      <button class="nav-link" data-target="education">Education</button>
+      <button class="nav-link" data-target="skills">Skills</button>
+      <button class="nav-link" data-target="projects">Projects</button>
+      <button class="nav-link" data-target="leadership">Leadership</button>
+      <button class="nav-link" data-target="contact">Contact</button>
+    </nav>
+
+    <!-- Theme Switch & Actions -->
+    <div class="header-actions">
+      <button id="theme-toggle-btn" class="theme-btn text-slate-600 dark:text-slate-300">
+        <span id="theme-icon-container">
+          <!-- Icon injected by JS -->
+        </span>
+        <span id="theme-toggle-text">Sunset Mode</span>
+      </button>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="mobile-menu-btn text-slate-600 dark:text-slate-300">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Multi-Slide Viewport -->
+  <main class="main-viewport">
+    <div class="viewport-container">
+
+      <!-- SLIDE 1: HOME -->
+      <section id="section-home" class="section-panel section-active">
+        <!-- Particle canvas background -->
+        <canvas id="particleCanvas" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;"></canvas>
+        <div class="home-grid" style="position:relative;z-index:1;">
+          
+          <!-- Avatar Container -->
+          <div class="avatar-column">
+            <div class="avatar-glow-wrapper">
+              <div class="avatar-glow bg-gradient-orange dark:bg-gradient-blue"></div>
+              <div class="avatar-img-box border-orange dark:border-blue float-avatar-blue" id="profile-avatar">
+                <img src="assets/profile.png" alt="Jogi Shanvitha Devi portrait" class="avatar-img" onerror="this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&amp;auto=format&amp;fit=crop&amp;q=60'">
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Typography -->
+          <div class="hero-column">
+            <div class="badge-internship text-orange-700 bg-orange-100 dark:text-blue-400 dark:bg-blue-950 border-orange dark:border-blue">
+              <span class="badge-dot bg-orange-500 dark:bg-blue-500"></span>
+              Available for Internships
+            </div>
+            
+            <h2 class="hero-title text-slate-900 dark:text-white">
+              Hello, I'm <br><span class="hero-name bg-gradient-orange dark:bg-gradient-blue bg-clip-text text-transparent">Jogi Shanvitha Devi</span>
+            </h2>
+
+            <div class="hero-typed-container">
+              <span class="hero-typed-static">I am a </span>
+              <span class="hero-typed text-orange-650 dark:text-blue-400" id="typedText"></span>
+              <span class="hero-cursor bg-orange-650 dark:bg-blue-400" id="typedCursor">|</span>
+            </div>
+
+            <p class="hero-desc text-slate-650 dark:text-slate-350">
+              Highly motivated B.Tech student with strong problem-solving skills and a foundation in programming and web development. Passionate about building responsive web applications and eager to gain real-world experience through internships.
+            </p>
+
+            <!-- Quick Details Grid -->
+            <div class="hero-info-grid border-y border-slate-200 dark:border-slate-900 text-slate-500 dark:text-slate-400">
+              <div class="info-item">
+                <i class="fa-solid fa-location-dot text-orange-500 dark:text-blue-400"></i>
+                <span>Ghatkesar, Hyderabad</span>
+              </div>
+              <div class="info-item">
+                <i class="fa-solid fa-graduation-cap text-orange-500 dark:text-blue-400"></i>
+                <span>Class of 2028</span>
+              </div>
+              <div class="info-item">
+                <i class="fa-solid fa-envelope text-orange-500 dark:text-blue-400"></i>
+                <a href="mailto:mailtoshanvithadevi@gmail.com" class="hover:underline">mailtoshanvithadevi@gmail.com</a>
+              </div>
+              <div class="info-item">
+                <i class="fa-solid fa-phone text-orange-500 dark:text-blue-400"></i>
+                <a href="tel:8247458518" class="hover:underline">8247458518</a>
+              </div>
+            </div>
+
+            <!-- Socials & CTAs -->
+            <div class="hero-actions">
+              <button data-target="projects" class="btn btn-primary btn-primary-orange dark:btn-primary-blue text-sm">
+                View Projects
+              </button>
+              <button data-target="contact" class="btn btn-secondary border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:text-orange-500 dark:hover:text-blue-400 text-sm">
+                Contact Me
+              </button>
+              <a href="assets/resume.pdf" download class="btn btn-secondary border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:text-orange-500 dark:hover:text-blue-400 text-sm" target="_blank" rel="noopener noreferrer">
+                Download Resume
+              </a>
+              
+              <div class="social-links-row">
+                <a href="https://github.com/shanvithadevi" target="_blank" rel="noopener noreferrer" class="social-icon-btn border-slate-200 dark:border-slate-900 bg-white dark:bg-slate-900 text-slate-750 dark:text-slate-300 hover:text-orange-500 dark:hover:text-blue-400 transition-all" aria-label="GitHub Profile">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/jogishanvithadevi/" target="_blank" rel="noopener noreferrer" class="social-icon-btn border-slate-200 dark:border-slate-900 bg-white dark:bg-slate-900 text-slate-750 dark:text-slate-300 hover:text-orange-500 dark:hover:text-blue-400 transition-all" aria-label="LinkedIn Profile">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SLIDE 2: ABOUT ME -->
+      <section id="section-about" class="section-panel section-right py-16 px-6 overflow-y-auto">
+        <div class="slide-content-wrap">
+          
+          <div class="section-header text-center">
+            <h3 class="section-tag text-orange-600 dark:text-blue-400">About Me</h3>
+            <h2 class="section-title text-slate-900 dark:text-white">Profile Overview</h2>
+            <div class="header-line bg-orange-500 dark:bg-blue-600"></div>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-visual">
+              <div class="orbit-illustration">
+                <div class="illustration-center bg-gradient-orange dark:bg-gradient-blue shadow-orange dark:shadow-blue">
+                  <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="orbit-ring orbit-ring-1">
+                  <div class="orbit-dot orbit-dot-1" title="C"><i class="fa-solid fa-terminal"></i></div>
+                </div>
+                <div class="orbit-ring orbit-ring-2">
+                  <div class="orbit-dot orbit-dot-2" title="C++"><i class="fa-solid fa-c"></i></div>
+                </div>
+                <div class="orbit-ring orbit-ring-3">
+                  <div class="orbit-dot orbit-dot-3" title="JavaScript"><i class="fa-brands fa-js"></i></div>
+                </div>
+                <div class="orbit-ring orbit-ring-4">
+                  <div class="orbit-dot orbit-dot-4" title="HTML5 & CSS3"><i class="fa-brands fa-html5"></i></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-text-column">
+              <h3 class="about-subtitle text-slate-900 dark:text-white">B.Tech Student &amp; Web Developer</h3>
+              <p class="about-para text-slate-650 dark:text-slate-350">
+                I am a passionate B.Tech student at <strong>ACE Engineering College</strong> with a strong interest in web development and software engineering. I enjoy creating responsive user interfaces, solving real-world problems, and continuously learning new technologies. My goal is to build impactful applications that improve people's lives while strengthening my technical expertise.
+              </p>
+
+              <div class="about-details-grid border-t border-slate-200 dark:border-slate-900">
+                <div class="detail-card glass-card-light dark:glass-card-dark border-slate-200 dark:border-slate-900">
+                  <span class="detail-icon bg-orange-100 dark:bg-blue-950 text-orange-650 dark:text-blue-400"><i class="fa-solid fa-phone"></i></span>
+                  <div class="detail-info">
+                    <span class="detail-label text-slate-450">Phone</span>
+                    <span class="detail-value text-slate-900 dark:text-white">8247458518</span>
+                  </div>
+                </div>
+                <div class="detail-card glass-card-light dark:glass-card-dark border-slate-200 dark:border-slate-900">
+                  <span class="detail-icon bg-orange-100 dark:bg-blue-950 text-orange-650 dark:text-blue-400"><i class="fa-solid fa-envelope"></i></span>
+                  <div class="detail-info">
+                    <span class="detail-label text-slate-450">Email</span>
+                    <span class="detail-value text-slate-900 dark:text-white block truncate">mailtoshanvithadevi@gmail.com</span>
+                  </div>
+                </div>
+                <div class="detail-card glass-card-light dark:glass-card-dark border-slate-200 dark:border-slate-900">
+                  <span class="detail-icon bg-orange-100 dark:bg-blue-950 text-orange-650 dark:text-blue-400"><i class="fa-solid fa-location-dot"></i></span>
+                  <div class="detail-info">
+                    <span class="detail-label text-slate-450">Location</span>
+                    <span class="detail-value text-slate-900 dark:text-white">Ghatkesar, Hyderabad</span>
+                  </div>
+                </div>
+                <div class="detail-card glass-card-light dark:glass-card-dark border-slate-200 dark:border-slate-900">
+                  <span class="detail-icon bg-orange-100 dark:bg-blue-950 text-orange-650 dark:text-blue-400"><i class="fa-solid fa-graduation-cap"></i></span>
+                  <div class="detail-info">
+                    <span class="detail-label text-slate-450">College</span>
+                    <span class="detail-value text-slate-900 dark:text-white">ACE Engineering College</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="about-action-row pt-6">
+                <button data-target="contact" class="btn btn-primary btn-primary-orange dark:btn-primary-blue text-sm">
+                  Let's Collaborate
+                </button>
+                <button data-target="projects" class="btn btn-secondary border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:text-orange-500 dark:hover:text-blue-400 text-sm">
+                  Explore My Projects
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SLIDE 3: EDUCATION -->
+      <section id="section-education" class="section-panel section-right py-16 px-6 overflow-y-auto">
+        <div class="slide-content-wrap">
+          
+          <div class="section-header text-center">
+            <h3 class="section-tag text-orange-600 dark:text-blue-400">Academic Journey</h3>
+            <h2 class="section-title text-slate-900 dark:text-white">Education Timeline</h2>
+            <div class="header-line bg-orange-500 dark:bg-blue-600"></div>
+          </div>
+
+          <div class="timeline-container">
+            <!-- Timeline Center Line -->
+            <div class="timeline-line-bar bg-slate-200 dark:bg-slate-900"></div>
+
+            <div class="timeline-items">
+              
+              <!-- Education Block 1: ACE B.Tech -->
+              <div class="timeline-item-block group">
+                <div class="timeline-date-side text-right pr-8">
+                  <span class="date-badge bg-orange-500/10 dark:bg-blue-950/60 border border-orange-500/20 dark:border-blue-900/40 text-orange-600 dark:text-blue-400 font-mono">2024 - 2028 (Expected)</span>
+                </div>
+                
+                <!-- Dot node -->
+                <div class="timeline-dot-node bg-orange-500 dark:bg-blue-600 border-white dark:border-slate-950 shadow-orange dark:shadow-blue group-hover:scale-125"></div>
+                
+                <div class="timeline-content-side pl-8">
+                  <div class="timeline-card glass-card-light dark:glass-card-dark border-slate-250 dark:border-slate-900 hover:border-orange-500/50 dark:hover:border-blue-500/50 transition-all duration-300 shadow-sm hover:shadow-md">
+                    <span class="date-badge-mobile bg-orange-500/10 dark:bg-blue-950/60 border border-orange-500/20 dark:border-blue-900/40 text-orange-600 dark:text-blue-400 font-mono">2024 - 2028</span>
+                    <h4 class="timeline-degree-title text-slate-900 dark:text-white">Bachelor of Technology (B.Tech)</h4>
+                    <p class="timeline-institution text-orange-600 dark:text-blue-400 mt-1">ACE Engineering College, Hyderabad</p>
+                    <p class="timeline-desc text-slate-550 dark:text-slate-400 mt-2">Specializing in computer programming, website development, and algorithmic problem solving.</p>
+                    <div class="timeline-footer-row border-t border-slate-200 dark:border-slate-900 pt-3">
+                      <span class="grade-label text-slate-500 dark:text-slate-400">Current CGPA</span>
+                      <span class="grade-val bg-orange-100 dark:bg-blue-950/50 text-orange-700 dark:text-blue-400 font-mono">8.7 / 10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Education Block 2: Sri Vidhya Techno Junior College -->
+              <div class="timeline-item-block timeline-row-reverse group">
+                <div class="timeline-date-side text-left pl-8">
+                  <span class="date-badge bg-orange-500/10 dark:bg-blue-950/60 border border-orange-500/20 dark:border-blue-900/40 text-orange-600 dark:text-blue-400 font-mono">2022 - 2024</span>
+                </div>
+                
+                <!-- Dot node -->
+                <div class="timeline-dot-node bg-slate-400 dark:bg-slate-700 border-white dark:border-slate-950 group-hover:scale-125"></div>
+                
+                <div class="timeline-content-side pr-8 text-right">
+                  <div class="timeline-card glass-card-light dark:glass-card-dark border-slate-250 dark:border-slate-900 hover:border-orange-500/50 dark:hover:border-blue-500/50 transition-all duration-300 shadow-sm hover:shadow-md text-left">
+                    <span class="date-badge-mobile bg-orange-500/10 dark:bg-blue-950/60 border border-orange-500/20 dark:border-blue-900/40 text-orange-600 dark:text-blue-400 font-mono">2022 - 2024</span>
+                    <h4 class="timeline-degree-title text-slate-900 dark:text-white">Intermediate (12th Grade)</h4>
+                    <p class="timeline-institution text-orange-600 dark:text-blue-400 mt-1">Sri Vidhya Techno Junior College, Manuguru</p>
+                    <p class="timeline-desc text-slate-550 dark:text-slate-400 mt-2">Focused on Physics, Chemistry, and Mathematics (MPC), completing studies with top academic records.</p>
+                    <div class="timeline-footer-row border-t border-slate-200 dark:border-slate-900 pt-3">
+                      <span class="grade-label text-slate-500 dark:text-slate-400">Final Score</span>
+                      <span class="grade-val bg-orange-100 dark:bg-blue-950/50 text-orange-700 dark:text-blue-400 font-mono">95%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Education Block 3: Excellent High School -->
+              <div class="timeline-item-block group">
+                <div class="timeline-date-side text-right pr-8">
+                  <span class="date-badge bg-orange-500/10 dark:bg-blue-950/60 border border-orange-500/20 dark:border-blue-900/40 text-orange-600 dark:text-blue-400 font-mono">2020 - 2022</span>
+                </div>
+                
+                <!-- Dot node -->
+                <div class="timeline-dot-node bg-slate-400 dark:bg-slate-700 border-white dark:border-slate-950 group-hover:scale-125"></div>
+                
+                <div class="timeline-content-side pl-8">
+                  <div class="timeline-card glass-card-light dark:glass-card-dark border-slate-250 dark:border-slate-900 hover:border-orange-500/50 dark:hover:border-blue-500/50 transition-all duration-300 shadow-sm hover:shadow-md">
+                    <span class="date-badge-mobile bg-orange-500/10 dark:bg-blue-950/60 border border-orange-500/20 dark:border-blue-900/40 text-orange-600 dark:text-blue-400 font-mono">2020 - 2022</span>
+                    <h4 class="timeline-degree-title text-slate-900 dark:text-white">Secondary School (10th Grade)</h4>
+                    <p class="timeline-institution text-orange-600 dark:text-blue-400 mt-1">Excellent High School, Manuguru</p>
+                    <p class="timeline-desc text-slate-550 dark:text-slate-400 mt-2">Acquired key secondary education foundation with outstanding marks and top performance.</p>
+                    <div class="timeline-footer-row border-t border-slate-200 dark:border-slate-900 pt-3">
+                      <span class="grade-label text-slate-500 dark:text-slate-400">Final Grade</span>
+                      <span class="grade-val bg-orange-100 dark:bg-blue-950/50 text-orange-700 dark:text-blue-400 font-mono">GPA 9.8 / 10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SLIDE 4: SKILLS -->
+      <section id="section-skills" class="section-panel section-right py-16 px-6 overflow-y-auto">
+        <div class="slide-content-wrap">
+          
+          <div class="section-header text-center">
+            <h3 class="section-tag text-orange-600 dark:text-blue-400">What I Know</h3>
+            <h2 class="section-title text-slate-900 dark:text-white">Skills &amp; Expertise</h2>
+            <div class="header-line bg-orange-500 dark:bg-blue-600"></div>
+          </div>
+
+          <div class="skills-grid">
+            <!-- Programming Languages -->
+            <div class="skill-category-card glass-card-light dark:glass-card-dark border-slate-200 dark:border-slate-900">
+              <h3 class="skill-category-title text-slate-900 dark:text-white">
+                <i class="fa-solid fa-code text-orange-500 dark:text-blue-400"></i> Programming Languages
+              </h3>
+              <div class="skills-bars-container">
+                <div class="skill-bar-wrapper">
+                  <div class="skill-bar-info text-slate-650 dark:text-slate-300">
+                    <span>C Programming</span>
+                    <span class="skill-percent-indicator text-orange-650 dark:text-blue-400">Proficient (85%)</span>
+                  </div>
+                  <div class="skill-track bg-slate-200 dark:bg-slate-800">
+                    <div class="skill-fill bg-orange-500 dark:bg-blue-600" data-width="85%"></div>
+                  </div>
+                </div>
+
+                <div class="skill-bar-wrapper">
+                  <div class="skill-bar-info text-slate-650 dark:text-slate-300">
+                    <span>C++</span>
+                    <span class="skill-percent-indicator text-orange-650 dark:text-blue-400">Intermediate (70%)</span>
+                  </div>
+                  <div class="skill-track bg-slate-200 dark:bg-slate-800">
+                    <div class="skill-fill bg-orange-500 dark:bg-blue-600" data-width="70%"></div>
+                  </div>
+                </div>
+
+                <div class="skill-bar-wrapper">
+                  <div class="skill-bar-info text-slate-650 dark:text-slate-300">
+                    <span>JavaScript (ES6+)</span>
+                    <span class="skill-percent-indicator text-orange-650 dark:text-blue-400">Intermediate (75%)</span>
+                  </div>
+                  <div class="skill-track bg-slate-200 dark:bg-slate-800">
+                    <div class="skill-fill bg-orange-500 dark:bg-blue-600" data-width="75%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Web Technologies -->
+            <div class="skill-category-card glass-card-light dark:glass-card-dark border-slate-200 dark:border-slate-900">
+              <h3 class="skill-category-title text-slate-900 dark:text-white">
+                <i class="fa-solid fa-globe text-orange-500 dark:text-blue-400"></i> Web Technologies
+              </h3>
+              <div class="skills-bars-container">
+                <div class="skill-bar-wrapper">
+                  <div class="skill-bar-info text-slate-650 dark:text-slate-300">
+                    <span>HTML5</span>
+                    <span class="skill-percent-indicator text-orange-650 dark:text-blue-400">Advanced (90%)</span>
+                  </div>
+                  <div class="skill-track bg-slate-200 dark:bg-slate-800">
+                    <div class="skill-fill bg-orange-500 dark:bg-blue-600" data-width="90%"></div>
+                  </div>
+                </div>
+
+                <div class="skill-bar-wrapper">
+                  <div class="skill-bar-info text-slate-650 dark:text-slate-300">
+                    <span>CSS3</span>
+                    <span class="skill-percent-indicator text-orange-650 dark:text-blue-400">Proficient (85%)</span>
+                  </div>
+                  <div class="skill-track bg-slate-200 dark:bg-slate-800">
+                    <div class="skill-fill bg-orange-500 dark:bg-blue-600" data-width="85%"></div>
+                  </div>
+                </div>
+
+                <div class="skill-bar-wrapper">
+                  <div class="skill-bar-info text-slate-650 dark:text-slate-300">
+                    <span>Responsive Web Design</span>
+                    <span class="skill-percent-indicator text-orange-650 dark:text-blue-400">Proficient (85%)</span>
+                  </div>
+                  <div class="skill-track bg-slate-200 dark:bg-slate-800">
+                    <div class="skill-fill bg-orange-500 dark:bg-blue-600" data-width="85%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tools & Developer Skills -->
+            <div class="skill-category-card glass-card-light dark:glass-card-dark border-slate-200 dark:border-slate-900">
+              <h3 class="skill-category-title text-slate-900 dark:text-white">
+                <i class="fa-solid fa-screwdriver-wrench text-orange-500 dark:text-blue-400"></i> Tools &amp; Methods
+              </h3>
+              <p class="skill-desc text-slate-500 dark:text-slate-400">Developer tools and platforms integrated into the building cycle.</p>
+              <div class="skills-tags-row">
+                <span class="skill-badge-tag bg-slate-100 dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200"><i class="fa-brands fa-git-alt text-red-500"></i> Git &amp; GitHub (Basic)</span>
+                <span class="skill-badge-tag bg-slate-100 dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200"><i class="fa-solid fa-compass text-teal-500"></i> UI/UX Principles</span>
+                <span class="skill-badge-tag bg-slate-100 dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200"><i class="fa-solid fa-code-compare text-yellow-500"></i> VS Code</span>
+                <span class="skill-badge-tag bg-slate-100 dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200"><i class="fa-solid fa-laptop-code text-blue-500"></i> Frontend Development</span>
+              </div>
+            </div>
+
+            <!-- Core Strengths -->
+            <div class="skill-category-card glass-card-light dark:glass-card-dark border-slate-200 dark:border-slate-900">
+              <h3 class="skill-category-title text-slate-900 dark:text-white">
+                <i class="fa-solid fa-brain text-orange-500 dark:text-blue-400"></i> Core Competencies
+              </h3>
+              <p class="skill-desc text-slate-500 dark:text-slate-400">Key algorithmic skills and team values guiding technical goals.</p>
+              <div class="skills-tags-row">
+                <span class="skill-badge-tag bg-slate-100 dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200"><i class="fa-solid fa-network-wired text-indigo-500"></i> Data Structures</span>
+                <span class="skill-badge-tag bg-slate-100 dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200"><i class="fa-solid fa-lightbulb text-yellow-500"></i> Problem Solving</span>
+                <span class="skill-badge-tag bg-slate-100 dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200"><i class="fa-solid fa-users text-purple-500"></i> Team Collaboration</span>
+                <span class="skill-badge-tag bg-slate-100 dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200"><i class="fa-solid fa-circle-nodes text-green-500"></i> Creative Thinking</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SLIDE 5: PROJECTS -->
+      <section id="section-projects" class="section-panel section-right py-16 px-6 overflow-y-auto">
+        <div class="slide-content-wrap">
+          
+          <div class="section-header text-center">
+            <h3 class="section-tag text-orange-600 dark:text-blue-400">Featured Work</h3>
+            <h2 class="section-title text-slate-900 dark:text-white">My Projects</h2>
+            <div class="header-line bg-orange-500 dark:bg-blue-600"></div>
+          </div>
+
+          <div class="projects-grid">
+            <!-- Project 1: Food Waste Management -->
+            <div class="project-card glass-card-light dark:glass-card-dark border-slate-200 dark:border-slate-900 hover:border-orange-500/50 dark:hover:border-blue-500/50">
+              <div class="project-card-body">
+                <div class="project-top-header">
+                  <div class="project-icon bg-orange-100 dark:bg-blue-950 text-orange-600 dark:text-blue-400">
+                    <i class="fa-solid fa-utensils"></i>
+                  </div>
+                  <span class="project-date bg-slate-100 dark:bg-slate-950 border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400">2024 – 2025</span>
+                </div>
+
+                <h3 class="project-title text-slate-900 dark:text-white hover:text-orange-500 dark:hover:text-blue-400">Food Waste Management System</h3>
+                <p class="project-desc text-slate-600 dark:text-slate-350">
+                  Developed a web platform connecting food donors with NGOs to facilitate donations and reduce food waste in community circles.
+                </p>
+
+                <ul class="project-features-list text-slate-650 dark:text-slate-350 text-sm">
+                  <li><i class="fa-solid fa-circle-check text-orange-500 dark:text-blue-400"></i> Responsive frontend using HTML, CSS and JavaScript</li>
+                  <li><i class="fa-solid fa-circle-check text-orange-500 dark:text-blue-400"></i> Intuitive donation workflow</li>
+                  <li><i class="fa-solid fa-circle-check text-orange-500 dark:text-blue-400"></i> Improved usability and accessibility</li>
+                  <li><i class="fa-solid fa-circle-check text-orange-500 dark:text-blue-400"></i> NGO-food donor connectivity platform</li>
+                </ul>
+
+                <div class="project-tech-tags">
+                  <span class="tech-tag border-slate-200 dark:border-slate-800 bg-slate-100/50 dark:bg-slate-950 text-slate-700 dark:text-slate-300">HTML</span>
+                  <span class="tech-tag border-slate-200 dark:border-slate-800 bg-slate-100/50 dark:bg-slate-950 text-slate-700 dark:text-slate-300">CSS</span>
+                  <span class="tech-tag border-slate-200 dark:border-slate-800 bg-slate-100/50 dark:bg-slate-950 text-slate-700 dark:text-slate-300">JavaScript</span>
+                </div>
+              </div>
+
+              <!-- Action Links -->
+              <div class="project-footer border-t border-slate-200 dark:border-slate-900 bg-slate-100/30 dark:bg-slate-950/20">
+                <a href="https://github.com/shanvithadevi" target="_blank" rel="noopener noreferrer" class="project-source-link text-orange-650 dark:text-blue-400 hover:underline">
+                  <i class="fa-brands fa-github"></i> Source Code
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 2: Social Connect Hub -->
+            <div class="project-card glass-card-light dark:glass-card-dark border-slate-200 dark:border-slate-900 hover:border-orange-500/50 dark:hover:border-blue-500/50">
+              <div class="project-card-body">
+                <div class="project-top-header">
+                  <div class="project-icon bg-orange-100 dark:bg-blue-950 text-orange-600 dark:text-blue-400">
+                    <i class="fa-solid fa-share-nodes"></i>
+                  </div>
+                  <span class="project-date bg-slate-100 dark:bg-slate-950 border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400">2024 – 2025</span>
+                </div>
+
+                <h3 class="project-title text-slate-900 dark:text-white hover:text-orange-500 dark:hover:text-blue-400">Social Connect Hub</h3>
+                <p class="project-desc text-slate-600 dark:text-slate-350">
+                  Created a prototype social networking platform for community engagement built with reusable components and a scalable UI architecture.
+                </p>
+
+                <ul class="project-features-list text-slate-650 dark:text-slate-350 text-sm">
+                  <li><i class="fa-solid fa-circle-check text-orange-500 dark:text-blue-400"></i> Reusable frontend components</li>
+                  <li><i class="fa-solid fa-circle-check text-orange-500 dark:text-blue-400"></i> Scalable UI architecture</li>
+                  <li><i class="fa-solid fa-circle-check text-orange-500 dark:text-blue-400"></i> Responsive design</li>
+                  <li><i class="fa-solid fa-circle-check text-orange-500 dark:text-blue-400"></i> Future-ready code structure</li>
+                </ul>
+
+                <div class="project-tech-tags">
+                  <span class="tech-tag border-slate-200 dark:border-slate-800 bg-slate-100/50 dark:bg-slate-950 text-slate-700 dark:text-slate-300">HTML</span>
+                  <span class="tech-tag border-slate-200 dark:border-slate-800 bg-slate-100/50 dark:bg-slate-950 text-slate-700 dark:text-slate-300">CSS</span>
+                  <span class="tech-tag border-slate-200 dark:border-slate-800 bg-slate-100/50 dark:bg-slate-950 text-slate-700 dark:text-slate-300">JavaScript</span>
+                </div>
+              </div>
+
+              <!-- Action Links -->
+              <div class="project-footer border-t border-slate-200 dark:border-slate-900 bg-slate-100/30 dark:bg-slate-950/20">
+                <a href="https://github.com/shanvithadevi" target="_blank" rel="noopener noreferrer" class="project-source-link text-orange-650 dark:text-blue-400 hover:underline">
+                  <i class="fa-brands fa-github"></i> Source Code
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SLIDE 6: LEADERSHIP -->
+      <section id="section-leadership" class="section-panel section-right py-16 px-6 overflow-y-auto">
+        <div class="slide-content-wrap">
+          
+          <div class="section-header text-center">
+            <h3 class="section-tag text-orange-600 dark:text-blue-400">Beyond Academics</h3>
+            <h2 class="section-title text-slate-900 dark:text-white">Leadership Experience</h2>
+            <div class="header-line bg-orange-500 dark:bg-blue-600"></div>
+          </div>
+
+          <div class="leadership-container">
+            <div class="leadership-details-card glass-card-light dark:glass-card-dark border-slate-250 dark:border-slate-900">
+              <div class="leadership-top">
+                <div class="leadership-title-box">
+                  <h3 class="leadership-title text-slate-900 dark:text-white">Student Coordinator</h3>
+                  <p class="leadership-college text-orange-600 dark:text-blue-400 mt-1">ACE Engineering College, Hyderabad</p>
+                </div>
+                <div class="leadership-icon bg-orange-100 dark:bg-blue-950 text-orange-650 dark:text-blue-400 shadow-sm">
+                  <i class="fa-solid fa-users-gear"></i>
+                </div>
+              </div>
+
+              <div class="leadership-desc-box border-t border-slate-200 dark:border-slate-900 pt-4">
+                <h4 class="responsibilities-header text-slate-700 dark:text-slate-350 text-sm font-bold uppercase mb-3">Key Responsibilities</h4>
+                <ul class="responsibilities-list text-slate-650 dark:text-slate-350 text-sm space-y-3">
+                  <li class="flex items-start gap-2.5"><span class="list-bullet bg-orange-500 dark:bg-blue-500 mt-1.5"></span><p>Organized workshops, technical bootcamps, and events for student enrichment.</p></li>
+                  <li class="flex items-start gap-2.5"><span class="list-bullet bg-orange-500 dark:bg-blue-500 mt-1.5"></span><p>Managed and led student volunteer teams to execute college functions successfully.</p></li>
+                  <li class="flex items-start gap-2.5"><span class="list-bullet bg-orange-500 dark:bg-blue-500 mt-1.5"></span><p>Coordinated communication flows between student bodies and college faculty administrators.</p></li>
+                  <li class="flex items-start gap-2.5"><span class="list-bullet bg-orange-500 dark:bg-blue-500 mt-1.5"></span><p>Ensured timely completion of tasks and deliverables during department symposia.</p></li>
+                </ul>
+              </div>
+
+              <!-- Stats Highlights -->
+              <div class="leadership-stats-banner border-t border-slate-200 dark:border-slate-900 pt-6">
+                <div class="stat-box bg-slate-100/50 dark:bg-slate-950/50 border-slate-200 dark:border-slate-900">
+                  <span class="stat-number text-orange-650 dark:text-blue-400">4+</span>
+                  <span class="stat-text text-slate-500 dark:text-slate-450 uppercase">Events Organized</span>
+                </div>
+                <div class="stat-box bg-slate-100/50 dark:bg-slate-950/50 border-slate-200 dark:border-slate-900">
+                  <span class="stat-number text-orange-650 dark:text-blue-400">10+</span>
+                  <span class="stat-text text-slate-500 dark:text-slate-450 uppercase">Volunteers Led</span>
+                </div>
+                <div class="stat-box bg-slate-100/50 dark:bg-slate-950/50 border-slate-200 dark:border-slate-900">
+                  <span class="stat-number text-orange-650 dark:text-blue-400">150+</span>
+                  <span class="stat-text text-slate-500 dark:text-slate-450 uppercase">Students Impacted</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SLIDE 7: CONTACT -->
+      <section id="section-contact" class="section-panel section-right py-16 px-6 overflow-y-auto">
+        <div class="slide-content-wrap">
+          
+          <div class="section-header text-center">
+            <h3 class="section-tag text-orange-600 dark:text-blue-400">Say Hello</h3>
+            <h2 class="section-title text-slate-900 dark:text-white">Get In Touch</h2>
+            <div class="header-line bg-orange-500 dark:bg-blue-600"></div>
+          </div>
+
+          <div class="contact-grid">
+            <!-- Contact Details (Left Column) -->
+            <div class="contact-details-column space-y-4">
+              <!-- Location Card -->
+              <div class="contact-info-block glass-card-light dark:glass-card-dark border-slate-200 dark:border-slate-900 shadow-sm">
+                <div class="contact-icon bg-orange-100 dark:bg-blue-950 text-orange-600 dark:text-blue-400">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <h4 class="contact-label text-slate-500 dark:text-slate-400">Location</h4>
+                  <p class="contact-value text-slate-900 dark:text-white">Ghatkesar, Hyderabad</p>
+                </div>
+              </div>
+
+              <!-- Phone Card -->
+              <a href="tel:8247458518" class="contact-info-block glass-card-light dark:glass-card-dark border-slate-200 dark:border-slate-900 shadow-sm hover:border-orange-500/50 dark:hover:border-blue-500/50 transition-all">
+                <div class="contact-icon bg-orange-100 dark:bg-blue-950 text-orange-600 dark:text-blue-400">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                  <h4 class="contact-label text-slate-500 dark:text-slate-400">Phone</h4>
+                  <p class="contact-value text-slate-900 dark:text-white">8247458518</p>
+                </div>
+              </a>
+
+              <!-- Email Card -->
+              <a href="mailto:mailtoshanvithadevi@gmail.com" class="contact-info-block glass-card-light dark:glass-card-dark border-slate-200 dark:border-slate-900 shadow-sm hover:border-orange-500/50 dark:hover:border-blue-500/50 transition-all">
+                <div class="contact-icon bg-orange-100 dark:bg-blue-950 text-orange-600 dark:text-blue-400">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <h4 class="contact-label text-slate-500 dark:text-slate-400">Email Address</h4>
+                  <p class="contact-value text-slate-900 dark:text-white block truncate">mailtoshanvithadevi@gmail.com</p>
+                </div>
+              </a>
+
+              <!-- Social Cards Row -->
+              <div class="contact-socials-row">
+                <a href="https://github.com/shanvithadevi" target="_blank" rel="noopener noreferrer" class="contact-social-card glass-card-light dark:glass-card-dark border-slate-200 dark:border-slate-900 hover:border-orange-500/55 dark:hover:border-blue-500/55 transition-all" aria-label="GitHub Profile">
+                  <i class="fa-brands fa-github text-slate-800 dark:text-slate-200"></i>
+                  <span class="social-card-label text-slate-500 dark:text-slate-400">GitHub</span>
+                </a>
+                <a href="https://linkedin.com/in/jogishanvithadevi/" target="_blank" rel="noopener noreferrer" class="contact-social-card glass-card-light dark:glass-card-dark border-slate-200 dark:border-slate-900 hover:border-orange-500/55 dark:hover:border-blue-500/55 transition-all" aria-label="LinkedIn Profile">
+                  <i class="fa-brands fa-linkedin-in text-blue-600"></i>
+                  <span class="social-card-label text-slate-500 dark:text-slate-400">LinkedIn</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Contact Form (Right Column) -->
+            <div class="contact-form-column">
+              <div class="form-wrapper-box glass-card-light dark:glass-card-dark border-slate-200 dark:border-slate-900 shadow-md">
+                <form id="portfolio-contact-form" class="space-y-4">
+                  <div class="form-group-item">
+                    <label for="form-name" class="form-item-label text-slate-3">Full Name</label>
+                    <input type="text" id="form-name" placeholder="John Doe" class="form-input border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-950/70 focus:border-orange-500 dark:focus:border-blue-500 text-slate-900 dark:text-white" required>
+                  </div>
+                  <div class="form-group-item">
+                    <label for="form-email" class="form-item-label text-slate-3">Email Address</label>
+                    <input type="email" id="form-email" placeholder="john@example.com" class="form-input border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-950/70 focus:border-orange-500 dark:focus:border-blue-500 text-slate-900 dark:text-white" required>
+                  </div>
+                  <div class="form-group-item">
+                    <label for="form-subject" class="form-item-label text-slate-3">Subject</label>
+                    <input type="text" id="form-subject" placeholder="Collaboration Opportunity" class="form-input border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-950/70 focus:border-orange-500 dark:focus:border-blue-500 text-slate-900 dark:text-white" required>
+                  </div>
+                  <div class="form-group-item">
+                    <label for="form-message" class="form-item-label text-slate-3">Your Message</label>
+                    <textarea id="form-message" rows="4" placeholder="Write your message here..." class="form-input border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-950/70 focus:border-orange-500 dark:focus:border-blue-500 text-slate-900 dark:text-white resize-none" required></textarea>
+                  </div>
+
+                  <button type="submit" class="submit-btn text-white btn-primary-orange dark:btn-primary-blue">
+                    Send Message
+                  </button>
+                </form>
+
+                <!-- Feedback status message container -->
+                <div id="form-status" class="hidden"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ========== FOOTER (Placed at the bottom of the contact panel) ========== -->
+          <footer class="footer-section border-t border-slate-200 dark:border-slate-900">
+            <div class="footer-wrapper">
+              <span class="footer-logo text-sla">
+                <!-- Footer content omitted for brevity -->
+              </span>
+              <!-- Additional footer sections omitted -->
+            </div>
+          </footer>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Arrow Navigation -->
+  <button id="arrow-prev-btn" class="arrow-nav-btn btn-left" aria-label="Previous slide">
+    <i class="fa-solid fa-chevron-left"></i>
+  </button>
+  <button id="arrow-next-btn" class="arrow-nav-btn btn-right" aria-label="Next slide">
+    <i class="fa-solid fa-chevron-right"></i>
+  </button>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer-overlay" class="mobile-drawer-overlay opacity-0 pointer-events-none"></div>
+  <aside id="mobile-drawer" class="mobile-drawer-aside translate-x-full">
+    <div class="mobile-drawer-header">
+      <div class="logo-box-sm">JD</div>
+      <button id="close-mobile-menu-btn" class="mobile-menu-btn text-slate-600 dark:text-slate-300">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <nav class="mobile-nav-links-container">
+      <button class="mobile-nav-link nav-link" data-target="home">Home</button>
+      <button class="mobile-nav-link nav-link" data-target="about">About</button>
+      <button class="mobile-nav-link nav-link" data-target="education">Education</button>
+      <button class="mobile-nav-link nav-link" data-target="skills">Skills</button>
+      <button class="mobile-nav-link nav-link" data-target="projects">Projects</button>
+      <button class="mobile-nav-link nav-link" data-target="leadership">Leadership</button>
+      <button class="mobile-nav-link nav-link" data-target="contact">Contact</button>
+    </nav>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
