@@ -798,3 +798,18 @@ html.dark .form-status-loading { color:#94a3b8; }
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
 }
 .mobile-nav-links-container { display:flex; flex-direction:column; gap:4px; }
+/* Mobile drawer close button fix */
+#mobile-drawer {
+  z-index: 9999;
+}
+
+#mobile-drawer-overlay {
+  z-index: 9998;
+}
+
+#close-mobile-menu-btn {
+  position: relative;
+  z-index: 10000;
+  pointer-events: auto;
+  padding: 10px;
+}
