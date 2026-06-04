@@ -799,3 +799,16 @@ html.dark .form-status-loading { color:#94a3b8; }
 }
 .mobile-nav-links-container { display:flex; flex-direction:column; gap:4px; 
 }
+/* Mobile drawer utility classes */
+.translate-x-full {
+  transform: translateX(100%);
+}
+.opacity-0 {
+  opacity: 0;
+}
+.opacity-100 {
+  opacity: 1;
+}
+.pointer-events-none {
+  pointer-events: none;
+}
